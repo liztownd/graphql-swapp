@@ -14,6 +14,22 @@ function App() {
     console.log(query)
   }
 
+  // query should look something like this I think:
+
+  // query{
+  //   allPeople{
+  //     people (name: "Luke Skywalker"){
+  //       name 
+  //       filmConnection{
+  //         films{
+  //           title
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+
   return (
     <div >
      <Header/>
