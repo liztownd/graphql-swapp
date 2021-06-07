@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 import './App.css';
 import Header from './Components/Header'
 
@@ -8,10 +8,7 @@ function App() {
 
   function search(e: any, searchRef: string){
     e.preventDefault();
-    let query = {
-      name: {searchRef}
-    }
-    console.log(query)
+    console.log(searchRef)
   }
 
   // query should look something like this I think:
