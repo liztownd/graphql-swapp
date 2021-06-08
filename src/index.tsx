@@ -1,12 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+} from "@apollo/client";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const client = new ApolloClient({
+  uri: 'http://graphql.org/swapi-graphql',
+  cache: new InMemoryCache(),
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
+    "Access-Control-Allow-Headers":
+      "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",
+  },
+  credentials: "omit",
+});
+
 ReactDOM.render(
   <React.StrictMode>
+    <ApolloProvider client={client}>
     <App />
+    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

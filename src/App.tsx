@@ -1,35 +1,37 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import { useQuery } from '@apollo/client';
 import './App.css';
 import Header from './Components/Header'
+import GET_PEOPLE from './utils';
 
 function App() {
   const searchRef= useRef<HTMLInputElement>(null);
   if (searchRef && searchRef.current) { searchRef.current.value = ''; }
+  const [allPeople, setAllPeople] = useState()
+  const [newId, setNewId] = useState('cGVvcGxlOjE=')
+  const { loading, error, data } = useQuery(GET_PEOPLE)
+
+  if (data) {
+    setAllPeople(data)
+    console.log('all people', allPeople)
+  }
+
+
 
   function search(e: any, searchRef: string){
     e.preventDefault();
-    console.log(searchRef)
+    // @ts-ignore
+    let people = allPeople.people
+    let index = people.findIndex((p: {name: string, id: string}) => p.name === searchRef)
+    let id: string = people[index].id
+    setNewId(id)
+    console.log('newId', newId)
   }
-
-  // query should look something like this I think:
-
-  // query{
-  //   allPeople{
-  //     people (name: "Luke Skywalker"){
-  //       name 
-  //       filmConnection{
-  //         films{
-  //           title
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 
 
   return (
     <div >
-     <Header/>
+    {/* <Header/> */}
      <div className="container-md">
      <h2>Search for a character:</h2>
      <div className="input-group mb-3">

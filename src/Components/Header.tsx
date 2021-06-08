@@ -1,6 +1,10 @@
 import React from 'react'
 
-function Header() {
+interface Props {
+    name: string
+}
+
+const Header: React.FunctionComponent<Props> = ({ name }) => {
     return (
         <div className="jumbotron jumbotron-fluid">
             <div className="container">
