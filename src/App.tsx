@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useQuery } from '@apollo/client';
 import './App.css';
 import Header from './Components/Header'
-import GET_PEOPLE from './utils';
+import { GET_PEOPLE, GET_FILMS } from './utils';
 
 function App() {
   const searchRef= useRef<HTMLInputElement>(null);

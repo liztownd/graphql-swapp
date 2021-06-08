@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-const GET_PEOPLE = gql`
+export const GET_PEOPLE = gql`
 query{
 	allPeople{
     people{
@@ -12,4 +12,22 @@ query{
 
 `;
 
-export default GET_PEOPLE;
+export const GET_FILMS = gql`
+query{
+	person (id: "cGVvcGxlOjE="){
+      name 
+    	filmConnection{
+        films{
+          title
+          characterConnection{
+            characters{
+              name
+              id
+            }
+          }
+        }
+      }
+        }
+      }
+`;
+
