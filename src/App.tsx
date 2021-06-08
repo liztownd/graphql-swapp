@@ -11,6 +11,7 @@ function App() {
   const [newId, setNewId] = useState('cGVvcGxlOjE=')
   const { loading, error, data } = useQuery(GET_PEOPLE)
 
+
   if (data) {
     setAllPeople(data)
     console.log('all people', allPeople)
@@ -26,7 +27,9 @@ function App() {
     let id: string = people[index].id
     setNewId(id)
     console.log('newId', newId)
-  }
+    const { loading, error, data } = useQuery(GET_FILMS, 
+      variables: { newId })
+  } 
 
   interface IHeaderProps {
     title: string

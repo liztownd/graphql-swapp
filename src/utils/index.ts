@@ -13,8 +13,8 @@ query{
 `;
 
 export const GET_FILMS = gql`
-query{
-	person (id: "cGVvcGxlOjE="){
+query Person ($id: string){
+	person (id: $id){
       name 
     	filmConnection{
         films{
