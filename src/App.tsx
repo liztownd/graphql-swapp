@@ -28,10 +28,19 @@ function App() {
     console.log('newId', newId)
   }
 
+  interface IHeaderProps {
+    title: string
+    subtitle: string
+}
+
+  const headerProps = {
+    title: "GraphQL Star Wars App",
+    subtitle:"Find all the movies your favorite character appeared in."
+  }  as IHeaderProps
 
   return (
     <div >
-    {/* <Header/> */}
+  <Header title={headerProps.title} subtitle={headerProps.subtitle}/>
      <div className="container-md">
      <h2>Search for a character:</h2>
      <div className="input-group mb-3">

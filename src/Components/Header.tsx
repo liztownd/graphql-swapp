@@ -1,15 +1,16 @@
 import React from 'react'
 
 interface Props {
-    name: string
+    title: string
+    subtitle: string
 }
 
-const Header: React.FunctionComponent<Props> = ({ name }) => {
+const Header: React.FunctionComponent<Props> = ({ title, subtitle }) => {
     return (
         <div className="jumbotron jumbotron-fluid">
             <div className="container">
-                <h1 className="display-4">GraphQL Star Wars App</h1>
-                <p className="lead">Find all the movies your favorite character appeared in.</p>
+                <h1 className="display-4">{title}</h1>
+                <p className="lead">{subtitle}</p>
             </div>
         </div>
     )
