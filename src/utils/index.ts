@@ -18,6 +18,7 @@ query Person ($id: string){
       name 
     	filmConnection{
         films{
+          id
           title
           characterConnection{
             characters{
