@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/graphql-swapp/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/graphql-swapp/static/js/main.bff0b090.chunk.js",
+    "main.js.map": "/graphql-swapp/static/js/main.bff0b090.chunk.js.map",
+    "runtime-main.js": "/graphql-swapp/static/js/runtime-main.5d050d40.js",
+    "runtime-main.js.map": "/graphql-swapp/static/js/runtime-main.5d050d40.js.map",
+    "static/js/2.f2743236.chunk.js": "/graphql-swapp/static/js/2.f2743236.chunk.js",
+    "static/js/2.f2743236.chunk.js.map": "/graphql-swapp/static/js/2.f2743236.chunk.js.map",
+    "static/js/3.293ac9a4.chunk.js": "/graphql-swapp/static/js/3.293ac9a4.chunk.js",
+    "static/js/3.293ac9a4.chunk.js.map": "/graphql-swapp/static/js/3.293ac9a4.chunk.js.map",
+    "index.html": "/graphql-swapp/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/graphql-swapp/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.f2743236.chunk.js.LICENSE.txt": "/graphql-swapp/static/js/2.f2743236.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5d050d40.js",
+    "static/js/2.f2743236.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.bff0b090.chunk.js"
+  ]
+}

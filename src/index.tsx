@@ -10,7 +10,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const client = new ApolloClient({
-  uri: 'http://graphql.org/swapi-graphql',
+  uri: 'https://graphql.org/swapi-graphql',
   cache: new InMemoryCache(),
   headers: {
     "Access-Control-Allow-Origin": "*",
